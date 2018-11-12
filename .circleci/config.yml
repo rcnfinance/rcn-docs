@@ -1,0 +1,95 @@
+version: 2
+
+# List of jobs
+jobs:
+    # The install job
+    install:
+        working_directory: ~/project
+        docker:
+            - image: circleci/node:8.12
+        steps:
+            # Checkout the code from the branch into the working_directory
+            - checkout
+            # Log the current branch
+            - run:
+                name: Show current branch
+                command: echo ${CIRCLE_BRANCH}
+            # Restore local dependencies from cache
+            - restore_cache:
+                keys:
+                - v2-dependencies-{{ checksum "website/package.json" }}
+                - v2-dependencies-
+            # Install project dependencies
+            - run:
+                name: Install local dependencies
+                command: npm install --prefix website
+            # Cache local dependencies if they don't exist
+            - save_cache:
+                key: v2-dependencies-{{ checksum "website/package.json" }}
+                paths:
+                    - ./website/node_modules
+    # The spelling check job
+    spelling:
+        working_directory: ~/project
+        docker:
+            - image: circleci/node:8.12
+        steps:
+            # Checkout the code from the branch into the working_directory
+            - checkout
+            # Log the current branch
+            - run:
+                name: Show current branch
+                command: echo ${CIRCLE_BRANCH}
+            # Restore local dependencies from cache
+            - restore_cache:
+                keys:
+                - v2-dependencies-{{ checksum "website/package.json" }}
+                - v2-dependencies-
+            # Run spelling check
+            - run:
+                name: Check spelling
+                command: website/node_modules/.bin/mdspell -r **/*.md -n
+    build:
+        working_directory: ~/project
+        docker:
+            - image: circleci/node:8.12
+        steps:
+            # Checkout the code from the branch into the working_directory
+            - checkout
+            # Log the current branch
+            - run:
+                name: Show current branch
+                command: echo ${CIRCLE_BRANCH}
+            # Restore local dependencies from cache
+            - restore_cache:
+                keys:
+                - v2-dependencies-{{ checksum "website/package.json" }}
+                - v2-dependencies-
+            # Run build
+            - run:
+                name: Build
+                command: npm run build --prefix website
+            # Compress build
+            - run:
+                name: Compressing build
+                command: tar -czvf build.tar.gz website/build
+            # Save compressed build
+            - store_artifacts:
+                path: build.tar.gz
+            # Save build
+            - store_artifacts:
+                path: website/build
+
+
+workflows:
+    version: 2
+    # The build and deploy workflow
+    spelling_and_build:
+        jobs:
+            - install
+            - spelling:
+                requires:
+                    - install
+            - build:
+                requires:
+                    - install
