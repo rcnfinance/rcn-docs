@@ -1,0 +1,19 @@
+{
+  "Intro": {
+    "Abstract": [
+      "rcn",
+      "token",
+      "borrower",
+      "lender",
+      "cosigner"
+    ],
+    "How to": [
+      "interact",
+      "request-loan"
+    ],
+    "Protocol": [
+      "diaspore",
+      "debt-engine"
+    ]
+  }
+}
