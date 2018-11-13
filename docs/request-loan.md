@@ -14,7 +14,7 @@ The requester can choose any conditions for the loan; bad conditions probably re
 
 ### Amount & Oracle
 
-The Oracle defines what is going to be the currency of the loan, how many decimals that currency has, and how much is the equivalency of that currency to RCN; so the chosen Oracle will define the value of the requested amount.
+The Oracle defines which is going to be the currency of the loan, how many decimals that currency has, and what is it's equivalence with rcn; so the chosen Oracle will define the value of the requested amount.
 
 ~~~ javascript
 // Oracle
@@ -38,7 +38,7 @@ const amount = 10000000000000000000;
 
 ### Borrower
 
-The borrower is the Ethereum address that is going to receive the tokens of the lending, this field can be set to any address, but if the borrower is not the requester, the loan is considered not-approved and must be approved before filled. See [Approbation](#Approbation).
+The borrower is the Ethereum address that is going to receive the tokens of the lending, this field can be set to any address, but if the borrower is not the requester, the loan is considered not-approved and must be approved by the borrower before filled. See [Approval](#Approval).
 
 ### Salt
 
@@ -177,11 +177,11 @@ const id = await loanManager.calcId(
 );
 ~~~
 
-## Approbation
+## Approval
 
 > Note: This process is not required for self-signed loans.
 
-Loans created by a different address than the borrower begin their lifecycle as non-approve, those loans are not available to be filled and require an additional step, establishing the borrower approve of the conditions.
+Loans created by a different address than the borrower begin their lifecycle as non-approve, those loans are not available to be filled and require an additional step to establish the borrower approve of the conditions.
 
 This verification can be performed in different ways:
 
