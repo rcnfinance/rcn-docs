@@ -1,5 +1,9 @@
 bytes32
 uint256
+uint128
+uint40
+uint32
+uint24
 uint8
 DebtEngine
 Ethereum
@@ -8,8 +12,28 @@ LoanManager
 DebtManager
 DebtModels
 DebtModel
+InstallmentsModel
+installment
+installments
+Unix-timestamp
 RCN
 Ripio
 blockchain
+lifecycle
+0x0
+encodeData
+abi.encodePacked
+# Methods and parameters
+approveRequest
+loanRequest
+LoanApprover
+registerApprove
+_id
+_cuota
+_interestRate
+_installments
+_duration
+_timeUnit
+rcn
 # TODO: Remove TODO from dictionary
 TODO
