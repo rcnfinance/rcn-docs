@@ -4,13 +4,13 @@ title: Request loan
 sidebar_label: Request loan
 ---
 
-Loans can be requested by the borrower (self-signed) or using a creator, after the creation of the request, the above is available to be filled by a lender.
+The entry point for requesting loans is the LoanManager; this contract handles the verification of the intent of the borrower/creator/cosigner. So all requests are performed calling this contract.
 
-The entry point for requesting loans is the LoanManager; this contract handles the verification of the intent of the borrower/creator/cosigner. So all requests are performed calling such contract.
+Loans can be requested by the borrower (self-signed) or using a creator, after the creation of the request, once approved, the request is available to be filled by a lender.
 
 ## Create a request
 
-The requester can choose any conditions for the loan; bad conditions probably result in the request never being filled, avoiding this requires to set request parameters in line with the lenders market.
+The requester can choose any conditions for the loan; bad conditions probably result in the request never being filled, to avoid this is recommended to set request parameters in line with the lenders market.
 
 ### Amount & Oracle
 
@@ -38,7 +38,13 @@ const amount = 10000000000000000000;
 
 ### Borrower
 
-The borrower is the Ethereum address that is going to receive the tokens of the lend, this field can set to any address, but if the borrower is not the requester, the loan is considered not-approved and must be approved before filled. See [ApproBation](#Approbation).
+The borrower is the Ethereum address that is going to receive the tokens of the lending, this field can be set to any address, but if the borrower is not the requester, the loan is considered not-approved and must be approved before filled. See [Approbation](#Approbation).
+
+### Salt
+
+The loan request process also adds a salt parameter, because it's forbidden to request two loans with the same ID, the salt allows a requester to request many identical loans.
+
+This salt, like all the parameters of the request, is used to generate the ID hash of the petition.
 
 ### Expiration
 
@@ -83,7 +89,93 @@ The model should provide a helper function to construct this loan data; here we 
 | _interestRate | uint256 | Interest rate by second, encoded as the denominator of 10 000 000             |
 | _installments | uint24  | Total number of installments                                                  |
 | _duration     | uint40  | Duration of each installment                                                  |
-| _timeUnit     | uint32  | Min time-frame of the loan, time deltas lower than this value will be ignored |
+| _timeUnit     | uint32  | Minimum time-frame of the loan, a delta lower than this value will be ignored |
+
+### Example
+
+~~~ javascript
+// Encode loan data
+const data = await model.encodeData(
+    web3.toWei(100), // 100 RCN each installment
+    5256000000000,   // 60 % punitive interest rate
+    12,              // 12 installments
+    86400 * 30,      // 30 days each installment
+    86400            // 1 day time-frame
+);
+
+// prints
+// 0x00000000000000056bc75e2d63100000000000000000000000000000000000000000000000000000000004c7c203500000000c0000278d0000015180
+console.log(data);
+
+// Request loan
+const receipt = await loanManager.requestLoan(
+    web3.toWei(1000), // Request 1000 RCN
+    model.address,    // InstallmentsModel address
+    0x0,              // No Oracle
+    accounts[0],      // Address of the borrower
+    0x123,            // First time used Salt
+    2529822840,       // Request expiration, year 2050
+    data              // Constructor data for the model
+);
+~~~
+
+### Obtaining the ID
+
+The ID of the loan is deterministic and constructed using all the parameters of the request; the ID will be the same on the three contracts (Model, Engine, and Manager).
+
+There are three different ways of retrieving the ID of a loan application:
+
+#####  Reading events
+
+If the call is successful, it will emit an event log containing the id of the generated debt; this event can be captured and read once the transaction is confirmed.
+
+![Emited event as seen on etherscan.io](assets/img1.png)
+
+~~~ javascript
+// Topic 1 0x10bd555451531f08fbb7ee66486f7f562d9770e360365aef233d46e44ddf0bf3
+// Topic 2 <id>
+const event = receipt.logs.find(l => l.event === 'Requested');
+const id = events.args._id;
+~~~
+
+> Note: This method to retrieve the ID is not available within the execution of a contract.
+
+##### Result of the call
+
+If the call success it will be returning the ID of the loan, this is the easiest way to retrieve the ID when creating a loanRequest from another contract.
+
+~~~ solidity
+function foo(LoanManager _manager, bytes _data) external {	
+    bytes32 id = requestLoan(
+        1000 * 10 ** 18, // Requested 1000 RCN
+        address(model).  // Address of the model
+        address(0),      // No Oracle, using RCN as currency
+        address(this),   // Self signed, contract as borrower
+        now,             // Using timestamp as salt
+        now + 86400,     // Expires in 1 day
+        _data
+    );
+}
+~~~
+
+##### Predicting the ID
+
+IDs on RCN are deterministic, that means that knowing the creation data of a given loan the ID of that loan can be calculated, even when the loan does not exist.
+
+This process allows for an easy way to queue calls and approving contracts while avoiding to wait for confirmation of previous transactions.
+
+~~~ javascript
+const id = await loanManager.calcId(
+    web3.toWei(1000), // Request 1000 RCN
+    accounts[0],      // Address of the borrower
+    accounts[0],      // Address of the requester (who calls requestLoan)
+    model.address,    // InstallmentsModel address
+    0x0,              // No Oracle
+    0x123,            // Same salt as before
+    2529822840,       // Request expiration, year 2050
+    data              // Constructor data for the model
+);
+~~~
 
 ## Approbation
 
