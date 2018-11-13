@@ -26,6 +26,8 @@ abi.encodePacked
 # Methods and parameters
 approveRequest
 loanRequest
+LoanApprover
+registerApprove
 _id
 _cuota
 _interestRate

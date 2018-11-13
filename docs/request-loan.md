@@ -181,7 +181,7 @@ const id = await loanManager.calcId(
 
 > Note: This process is not required for self-signed loans.
 
-Loans created by a creator being their lifecycle as non-approved, those loans are not available to be filled and require an additional step establishing the borrower approve.
+Loans created by a different address than the borrower begin their lifecycle as non-approve, those loans are not available to be filled and require an additional step, establishing the borrower approve of the conditions.
 
 This verification can be performed in different ways:
 
@@ -194,3 +194,39 @@ bool success = loanManager..approveRequest(_id);
 ~~~
 
 If the approve is successful, the call returns true and emit an Approved(_id) event.
+
+### Using the borrower's signature
+
+If the Borrower is not a contract, it can accept the conditions of a loan signing a message with the ID of the request. 
+
+This process enables the borrower to approve a request without having to pre-fund their account with Ethereum.
+
+~~~ javascript
+// Sign loan id
+const signature = await web3.eth.sign(borrower, id);
+// Register approve
+const receipt = await loanManager.registerApproveRequest(id, signature, { from: accounts[2] });
+~~~
+
+### Using a callback
+
+If the borrower is a contract, it's possible to implement the [LoanApprover](#) interface. At the moment of the creation of the request or when *registerApprove* is called, the borrower implementing *LoanApprover* will receive a callback asking for a confirmation on the application.
+
+The Borrower's contract can approve the request by returning `_id ^ (XOR) keccak256("approve-loan-request")`, the application is considered rejected on any other returned value.
+
+~~~ solidity
+contract Borrower is LoanApprover {
+    function approveRequest(
+        bytes32 _futureDebt
+    ) external returns (bytes32) {
+        const mask = 0xdfcb15a077f54a681c23131eacdfd6e12b5e099685b492d382c3fd8bfc1e9a2a;
+        // Validate request here ...
+        // ...
+        // ...
+        // Approve the request
+        return _futureDebt ^ mask;
+    }
+}
+~~~
+
+> **Notice**: The callback signature must be *approveRequest(bytes32)*
