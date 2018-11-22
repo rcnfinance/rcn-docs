@@ -35,5 +35,9 @@ _installments
 _duration
 _timeUnit
 rcn
+page_size
+config
+configs
+canceled
 # TODO: Remove TODO from dictionary
 TODO
