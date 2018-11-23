@@ -8,7 +8,7 @@
 ## Run
 
 ```bash
-$ dockerc-compose up
+$ docker-compose up
 ```
 
 The server run in http://localhost:3000
