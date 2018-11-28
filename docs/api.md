@@ -155,11 +155,11 @@
             "id": "0x27e5541d54da6f916d8eb8cf905870d6980a1328972e8a85e4d03c8c55cb5f9b",
             "data": {
                 "installments": 30,
-                "duration": 11,
-                "lentTime": 86400,
-                "cuota": 1539849581,
-                "interestRate": 500000000000000000,
-                "timeUnit": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,109,252,245,0,0]
+                "timeUnit": 11,
+                "duration": 86400,
+                "lentTime": 1539849581,
+                "cuota": 500000000000000000,
+                "interestRate": 10368000000000
             },
             "commits": [
                 {
@@ -169,11 +169,11 @@
                     "proof": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
                     "data": {
                         "installments": 30,
-                        "duration": 11,
-                        "lentTime": 86400,
-                        "cuota": 1539849581,
-                        "interestRate": 500000000000000000,
-                        "timeUnit": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,109,252,245,0,0]
+                        "timeUnit": 11,
+                        "duration": 86400,
+                        "lentTime": 1539849581,
+                        "cuota": 500000000000000000,
+                        "interestRate": 10368000000000
                     }
                 }
             ]
@@ -202,11 +202,11 @@
         "id": "0x27e5541d54da6f916d8eb8cf905870d6980a1328972e8a85e4d03c8c55cb5f9b",
         "data": {
             "installments": 30,
-            "duration": 11,
-            "lentTime": 86400,
-            "cuota": 1539849581,
-            "interestRate": 500000000000000000,
-            "timeUnit": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,109,252,245,0,0]
+            "timeUnit": 11,
+            "duration": 86400,
+            "lentTime": 1539849581,
+            "cuota": 500000000000000000,
+            "interestRate": 10368000000000
         },
         "commits": [
             {
@@ -216,11 +216,11 @@
                 "proof": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
                 "data": {
                     "installments": 30,
-                    "duration": 11,
-                    "lentTime": 86400,
-                    "cuota": 1539849581,
-                    "interestRate": 500000000000000000,
-                    "timeUnit": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,109,252,245,0,0]
+                    "timeUnit": 11,
+                    "duration": 86400,
+                    "lentTime": 1539849581,
+                    "cuota": 500000000000000000,
+                    "interestRate": 10368000000000
                 }
             }
         ]
@@ -276,29 +276,43 @@
     },
     "content": [
         {
-            "id": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
-            "open": false,
-            "approved": false,
-            "position": "8193",
-            "expiration": "240056125.0",
-            "amount": "3298",
-            "cosigner": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
-            "model": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4c",
-            "creator": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4d",
-            "oracle": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea43",
-            "borrower": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4f",
-            "salt": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91eagb",
-            "loanData": "b'Nqf\\xef\\x19\\xdbC\\x07\\xbbb\\xe1\\x1c\\xcd\\xac\\xf8U=\\x18\\xf1\\xd5\\xd4\\xdf\\xc5\\x1f'",
-            "canceled": true,
-            "created": "505026943.0",
+            "id": "0xfec6fe99f05f3dabf00a850e4904d0ed1356a9fde34e2640d6fea0deb3fae21c",
+            "open": true,
+            "approved": true,
+            "position": "0",
+            "expiration": "15908979783594147839",
+            "amount": "12000000000000000000",
+            "cosigner": "0x0",
+            "model": "0x3dF10D67F683FE26a9f658b99e3C6a4a94d20690",
+            "creator": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+            "oracle": "0x0000000000000000000000000000000000000000",
+            "borrower": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+            "salt": "2031996",
+            "loanData": "000000000000000010cac896d239000000000000000000000000000000000000000000000000000000001792f7c64c0000000a0000014ff0",
+            "canceled": false,
+            "created": "1539878572",
             "commits": [
                 {
-                    "opcode": "asd",
-                    "timestamp": 172811475,
-                    "order": 4,
-                    "proof": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
+                    "opcode": "requested_loan_manager",
+                    "timestamp": 1539878572,
+                    "order": 3,
+                    "proof": "0x5630976a4dc9990153445cf6178742df7f5859bf345053dd202702465442b9fc",
                     "data": {
-                        "value": "pepito"
+                        "id": "0xfec6fe99f05f3dabf00a850e4904d0ed1356a9fde34e2640d6fea0deb3fae21c",
+                        "open": true,
+                        "approved": true,
+                        "position": "0",
+                        "cosigner": "0x0",
+                        "currency": "0000000000000000000000000000000000000000000000000000000000000000",
+                        "amount": "12000000000000000000",
+                        "model": "0x3dF10D67F683FE26a9f658b99e3C6a4a94d20690",
+                        "creator": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+                        "oracle": "0x0000000000000000000000000000000000000000",
+                        "borrower": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+                        "salt": "2031996",
+                        "loanData": "000000000000000010cac896d239000000000000000000000000000000000000000000000000000000001792f7c64c0000000a0000014ff0",
+                        "expiration": "15908979783594147839",
+                        "created": "1539878572"
                     }
                 }
             ]
@@ -325,32 +339,46 @@
         }
     },
     "content": {
-        "id": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
-            "open": false,
-            "approved": false,
-            "position": "8193",
-            "expiration": "240056125.0",
-            "amount": "3298",
-            "cosigner": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
-            "model": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4c",
-            "creator": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4d",
-            "oracle": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea43",
-            "borrower": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4f",
-            "salt": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91eagb",
-            "loanData": "b'Nqf\\xef\\x19\\xdbC\\x07\\xbbb\\xe1\\x1c\\xcd\\xac\\xf8U=\\x18\\xf1\\xd5\\xd4\\xdf\\xc5\\x1f'",
-            "canceled": true,
-            "created": "505026943.0",
-            "commits": [
-                {
-                    "opcode": "asd",
-                    "timestamp": 172811475,
-                    "order": 4,
-                    "proof": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
-                    "data": {
-                        "value": "pepito"
-                    }
+        "id": "0x2d346849518181a645b5b88b633af0c708ca1023f7f9df17caa93ec713abb038",
+        "open": true,
+        "approved": true,
+        "position": "0",
+        "expiration": "15908979783594147839",
+        "amount": "12000000000000000000",
+        "cosigner": "0x0",
+        "model": "0x3dF10D67F683FE26a9f658b99e3C6a4a94d20690",
+        "creator": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+        "oracle": "0x0000000000000000000000000000000000000000",
+        "borrower": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+        "salt": "18102018",
+        "loanData": "000000000000000010cac896d239000000000000000000000000000000000000000000000000000000001792f7c64c0000000a0000014ff0",
+        "canceled": false,
+        "created": "1539878721",
+        "commits": [
+            {
+                "opcode": "requested_loan_manager",
+                "timestamp": 1539878721,
+                "order": 4,
+                "proof": "0xfab4fa4a5c3d6aec16851227037dad52f09be0374a56a4ea8bf0389fda2c6be0",
+                "data": {
+                    "id": "0x2d346849518181a645b5b88b633af0c708ca1023f7f9df17caa93ec713abb038",
+                    "open": true,
+                    "approved": true,
+                    "position": "0",
+                    "cosigner": "0x0",
+                    "currency": "0000000000000000000000000000000000000000000000000000000000000000",
+                    "amount": "12000000000000000000",
+                    "model": "0x3dF10D67F683FE26a9f658b99e3C6a4a94d20690",
+                    "creator": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+                    "oracle": "0x0000000000000000000000000000000000000000",
+                    "borrower": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+                    "salt": "18102018",
+                    "loanData": "000000000000000010cac896d239000000000000000000000000000000000000000000000000000000001792f7c64c0000000a0000014ff0",
+                    "expiration": "15908979783594147839",
+                    "created": "1539878721"
                 }
-            ]
+            }
+        ]
     }
 }
 ```
