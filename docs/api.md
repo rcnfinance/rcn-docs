@@ -1,10 +1,18 @@
-# API
+---
+id: api
+title: API
+sidebar_label: API
+---
 
-## Fetching debts
+
+## Debts
+
+
+### Fetching debts
 
     GET /v4/debts/
 
-### Query parameters:
+#### Query parameters:
 
 | Field     | Type    | Description                                             | Optional |
 |-----------|---------|---------------------------------------------------------|----------|
@@ -16,9 +24,9 @@
 | page_size | integer | Get a list of config with n items                       | Yes      |
 | page      | integer | Get the nth page of configs                             | Yes      |
 
-### Response
+#### Response
 
-#### 200
+##### 200
 
 ```json
 {
@@ -68,13 +76,13 @@
 ```
 
 
-## Fetching a debt
+### Fetching a debt
 
     GET /v4/debts/:id/
 
-### Response
+#### Response
 
-#### 200
+##### 200
 
 ```json
 {
@@ -114,7 +122,7 @@
 }
 ```
 
-#### 404
+##### 404
 
 ```json
 {
@@ -123,19 +131,20 @@
 }
 ```
 
+## Configs
 
-## Fetching configs
+### Fetching configs
 
     GET /v4/configs/
 
-### Query parameters:
+#### Query parameters:
 
 | Field     | Type    | Description                       | Optional |
 |-----------|---------|-----------------------------------|----------|
 | page_size | integer | Get a list of config with n items | Yes      |
 | page      | integer | Get the nth page of configs       | Yes      |
 
-### Response
+#### Response
 
 ```json
 {
@@ -183,13 +192,13 @@
 ```
 
 
-## Fetching a config
+### Fetching a config
 
     GET /v4/configs/:id/
 
-### Response
+#### Response
 
-#### 200
+##### 200
 
 ```json
 {
@@ -228,7 +237,7 @@
 }
 ```
 
-#### 404
+##### 404
 
 ```json
 {
@@ -237,12 +246,13 @@
 }
 ```
 
+## Requests
 
-## Fetching requests
+### Fetching requests
 
     GET /v4/requests/
 
-### Query parameters:
+#### Query parameters:
 
 | Field     | Type    | Description                                                | Optional |
 |-----------|---------|------------------------------------------------------------|----------|
@@ -257,9 +267,9 @@
 | page_size | integer | Get a list of config with n items                          | Yes      |
 | page      | integer | Get the nth page of configs                                | Yes      |
 
-### Response
+#### Response
 
-#### 200
+##### 200
 
 ```json
 {
@@ -323,13 +333,13 @@
 ```
 
 
-## Fetching a request
+### Fetching a request
 
     GET /v4/requests/:id/
 
-### Response
+#### Response
 
-#### 200
+##### 200
 
 ```json
 {
@@ -383,7 +393,7 @@
 }
 ```
 
-#### 404
+##### 404
 
 ```json
 {
@@ -392,12 +402,13 @@
 }
 ```
 
+## Oracle History
 
-## Fetching oracle history
+### Fetching oracle history
 
     GET /v4/oracle_history/
 
-### Query parameters:
+#### Query parameters:
 
 | Field     | Type    | Description                       | Optional |
 |-----------|---------|-----------------------------------|----------|
@@ -405,9 +416,9 @@
 | page      | integer | Get the nth page of configs       | Yes      |
 
 
-### Response
+#### Response
 
-#### 200
+##### 200
 
 ```json
 {
@@ -440,11 +451,11 @@
 ```
 
 
-## Fetching a oracle history
+### Fetching a oracle history
 
     GET /v4/oracle_history/:id
 
-#### 200
+##### 200
 
 ```json
 {
@@ -462,11 +473,159 @@
 }
 ```
 
-#### 404
+##### 404
 
 ```json
 {
     "title": "History does not exists",
     "description": "History with id=x does not exists"
+}
+```
+
+
+## States
+
+### Fetching states
+
+    GET /v4/states/
+
+#### Query parameters:
+
+| Field     | Type    | Description                       | Optional |
+|-----------|---------|-----------------------------------|----------|
+| page_size | integer | Get a list of config with n items | Yes      |
+| page      | integer | Get the nth page of configs       | Yes      |
+| status    | string  | Get states by status code         | Yes      | 
+
+
+#### Response
+
+##### 200
+
+```json
+{
+    "meta": {
+        "params": {
+            "indent": 0,
+            "page_size": 10,
+            "page": 0
+        },
+        "page_size": 10,
+        "page": 0,
+        "prev": null,
+        "next": "page=1&page_size=10"
+    },
+    "content": [
+        {
+            "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+            "status": "0",
+            "clock": "86400",
+            "last_payment": "0",
+            "paid": "0",
+            "paid_base": "0",
+            "interest": "0",
+            "commits": [
+                {
+                    "opcode": "set_clock_installments",
+                    "timestamp": 1541796770,
+                    "order": 5,
+                    "proof": "0xfe6eac4a8a88695d43e71089af2554742716fbe25c3f1509a49ac0c1bf386eca",
+                    "data": {
+                        "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+                        "duration": "86400"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0x3c51b239bb507123a3568b5f47bba8fa811a9dc6caec186b359d049acbdb3cdd",
+            "status": "0",
+            "clock": "2592000",
+            "last_payment": "0",
+            "paid": "0",
+            "paid_base": "0",
+            "interest": "0",
+            "commits": [
+                {
+                    "opcode": "set_clock_installments",
+                    "timestamp": 1541800628,
+                    "order": 23,
+                    "proof": "0x724431327264c2d4b8ebcd0f525e4d67c6c637bd51a77c09ad7366e333ee0738",
+                    "data": {
+                        "id": "0x3c51b239bb507123a3568b5f47bba8fa811a9dc6caec186b359d049acbdb3cdd",
+                        "duration": "2592000"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "0x542bd1db5afae2cf83dd540c78edbed13a5df9c3d2149ba2ef9d2d045094f39d",
+            "status": "0",
+            "clock": "2592000",
+            "last_payment": "0",
+            "paid": "0",
+            "paid_base": "0",
+            "interest": "0",
+            "commits": [
+                {
+                    "opcode": "set_clock_installments",
+                    "timestamp": 1542835829,
+                    "order": 31,
+                    "proof": "0x533ebcd42e0cdfb2ef729ca671fb66235dbc2f03406789c6875a63bc650eafc8",
+                    "data": {
+                        "id": "0x542bd1db5afae2cf83dd540c78edbed13a5df9c3d2149ba2ef9d2d045094f39d",
+                        "duration": "2592000"
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
+
+
+### Fetching a state
+
+    GET /v4/states/:id
+
+##### 200
+
+```json
+{
+    "meta": {
+        "params": {
+            "indent": 0
+        }
+    },
+    "content": {
+        "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+        "status": "0",
+        "clock": "86400",
+        "last_payment": "0",
+        "paid": "0",
+        "paid_base": "0",
+        "interest": "0",
+        "commits": [
+            {
+                "opcode": "set_clock_installments",
+                "timestamp": 1541796770,
+                "order": 5,
+                "proof": "0xfe6eac4a8a88695d43e71089af2554742716fbe25c3f1509a49ac0c1bf386eca",
+                "data": {
+                    "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+                    "duration": "86400"
+                }
+            }
+        ]
+    }
+}
+```
+
+##### 404
+
+```json
+{
+    "title": "State does not exists",
+    "description": "State with id=X does not exists"
 }
 ```
