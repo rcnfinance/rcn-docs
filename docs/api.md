@@ -709,3 +709,35 @@ sidebar_label: API
     "description": "State with id=X does not exists"
 }
 ```
+
+
+## Model Debt Info
+
+### Fetching a model info
+
+    GET /v4/model_debt_info/:id
+
+##### 200
+
+```json
+{
+    "paid": 0,
+    "dueTime": 1541883170,
+    "estimatedObligation": 13442944166664979548,
+    "nextObligation": 1100000000000000000,
+    "currentObligation": 13442944166664979548,
+    "debtBalance": "0",
+    "owner": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C"
+}
+```
+
+##### 404
+
+```json
+{
+    "title": "Debt does not exist",
+    "description": "Debt with id=X does not exist"
+}
+```
+
+
