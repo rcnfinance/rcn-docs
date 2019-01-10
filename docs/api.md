@@ -17,7 +17,6 @@ sidebar_label: API
 | Field     | Type    | Description                                             | Optional |
 |-----------|---------|---------------------------------------------------------|----------|
 | error     | boolean | Get a list of debts with error equal than this value    | Yes      |
-| currency  | string  | Get a list of debts with currency equal than this value | Yes      |
 | model     | string  | Get a list of debts with model equal than this value    | Yes      |
 | creator   | string  | Get a list of debts with creator equal than this value  | Yes      |
 | oracle    | string  | Get a list of debts with oracle equal than this value   | Yes      |
@@ -43,29 +42,27 @@ sidebar_label: API
     },
     "content": [
         {
-            "id": "0x27e5541d54da6f916d8eb8cf905870d6980a1328972e8a85e4d03c8c55cb5f9b",
+            "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
             "error": false,
-            "currency": "0000000000000000",
             "balance": "0",
-            "model": "0x25E9746E5E76A75C90E895d1ed4Ad39355bdf9ad",
-            "creator": "0x80B9847b2446A9d179a5cc77f138A6Babca87f1D",
+            "model": "0xE3633E63Da6154D9450e34F0d4c64c6A51f6918e",
+            "creator": "0xbF77a4061eB243d38BaCBD684f0c3124eefE6E91",
             "oracle": "0x0000000000000000000000000000000000000000",
             "commits": [
                 {
                     "opcode": "created_debt_engine",
-                    "timestamp": 1539849581,
-                    "order": 2,
-                    "proof": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
+                    "timestamp": 1541796770,
+                    "order": 6,
+                    "proof": "0xfe6eac4a8a88695d43e71089af2554742716fbe25c3f1509a49ac0c1bf386eca",
                     "data": {
-                        "_data": "0x261ef5fb3fe3b7253c5fec6fd0ef312402c9cd97530516aef13241e23274f8e60000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000003c000000000000000006f05b59d3b200000000000000000000000000000000000000000000000000000000096dfcf5000000001e00000151800000000b",
+                        "_data": "0x7150d59760a6784ebc4325f4f77908df62855551d861ade1b1553e731b9b32e30000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000003c00000000000000000f43fc2c04ee000000000000000000000000000000000000000000000000000000001792f86480c800000c00000151800000003c",
                         "error": false,
-                        "currency": "0000000000000000",
                         "balance": "0",
-                        "model": "0x25E9746E5E76A75C90E895d1ed4Ad39355bdf9ad",
-                        "creator": "0x80B9847b2446A9d179a5cc77f138A6Babca87f1D",
+                        "model": "0xE3633E63Da6154D9450e34F0d4c64c6A51f6918e",
+                        "creator": "0xbF77a4061eB243d38BaCBD684f0c3124eefE6E91",
                         "oracle": "0x0000000000000000000000000000000000000000",
-                        "created": "1539849581",
-                        "id": "0x27e5541d54da6f916d8eb8cf905870d6980a1328972e8a85e4d03c8c55cb5f9b"
+                        "created": "1541796770",
+                        "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21"
                     }
                 }
             ]
@@ -92,29 +89,27 @@ sidebar_label: API
         }
     },
     "content": {
-        "id": "0x27e5541d54da6f916d8eb8cf905870d6980a1328972e8a85e4d03c8c55cb5f9b",
+        "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
         "error": false,
-        "currency": "0000000000000000",
         "balance": "0",
-        "model": "0x25E9746E5E76A75C90E895d1ed4Ad39355bdf9ad",
-        "creator": "0x80B9847b2446A9d179a5cc77f138A6Babca87f1D",
+        "model": "0xE3633E63Da6154D9450e34F0d4c64c6A51f6918e",
+        "creator": "0xbF77a4061eB243d38BaCBD684f0c3124eefE6E91",
         "oracle": "0x0000000000000000000000000000000000000000",
         "commits": [
             {
                 "opcode": "created_debt_engine",
-                "timestamp": 1539849581,
-                "order": 2,
-                "proof": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
+                "timestamp": 1541796770,
+                "order": 6,
+                "proof": "0xfe6eac4a8a88695d43e71089af2554742716fbe25c3f1509a49ac0c1bf386eca",
                 "data": {
-                    "_data": "0x261ef5fb3fe3b7253c5fec6fd0ef312402c9cd97530516aef13241e23274f8e60000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000003c000000000000000006f05b59d3b200000000000000000000000000000000000000000000000000000000096dfcf5000000001e00000151800000000b",
+                    "_data": "0x7150d59760a6784ebc4325f4f77908df62855551d861ade1b1553e731b9b32e30000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000003c00000000000000000f43fc2c04ee000000000000000000000000000000000000000000000000000000001792f86480c800000c00000151800000003c",
                     "error": false,
-                    "currency": "0000000000000000",
                     "balance": "0",
-                    "model": "0x25E9746E5E76A75C90E895d1ed4Ad39355bdf9ad",
-                    "creator": "0x80B9847b2446A9d179a5cc77f138A6Babca87f1D",
+                    "model": "0xE3633E63Da6154D9450e34F0d4c64c6A51f6918e",
+                    "creator": "0xbF77a4061eB243d38BaCBD684f0c3124eefE6E91",
                     "oracle": "0x0000000000000000000000000000000000000000",
-                    "created": "1539849581",
-                    "id": "0x27e5541d54da6f916d8eb8cf905870d6980a1328972e8a85e4d03c8c55cb5f9b"
+                    "created": "1541796770",
+                    "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21"
                 }
             }
         ]
@@ -161,32 +156,32 @@ sidebar_label: API
     },
     "content": [
         {
-            "id": "0x27e5541d54da6f916d8eb8cf905870d6980a1328972e8a85e4d03c8c55cb5f9b",
+            "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
             "data": {
-                "installments": 30,
-                "timeUnit": 11,
+                "installments": 12,
+                "timeUnit": 60,
                 "duration": 86400,
-                "lentTime": 1539849581,
-                "cuota": 500000000000000000,
-                "interestRate": 10368000000000
+                "lentTime": 1541796770,
+                "cuota": 1100000000000000000,
+                "interestRate": 25920000000200
             },
             "commits": [
                 {
                     "opcode": "created_installments",
-                    "timestamp": 1539849581,
-                    "order": 0,
-                    "proof": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
+                    "timestamp": 1541796770,
+                    "order": 4,
+                    "proof": "0xfe6eac4a8a88695d43e71089af2554742716fbe25c3f1509a49ac0c1bf386eca",
                     "data": {
-                        "installments": 30,
-                        "timeUnit": 11,
+                        "installments": 12,
+                        "timeUnit": 60,
                         "duration": 86400,
-                        "lentTime": 1539849581,
-                        "cuota": 500000000000000000,
-                        "interestRate": 10368000000000
+                        "lentTime": 1541796770,
+                        "cuota": 1100000000000000000,
+                        "interestRate": 25920000000200
                     }
                 }
             ]
-        }
+        },
     ]
 }
 ```
@@ -208,28 +203,28 @@ sidebar_label: API
         }
     },
     "content": {
-        "id": "0x27e5541d54da6f916d8eb8cf905870d6980a1328972e8a85e4d03c8c55cb5f9b",
+        "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
         "data": {
-            "installments": 30,
-            "timeUnit": 11,
+            "installments": 12,
+            "timeUnit": 60,
             "duration": 86400,
-            "lentTime": 1539849581,
-            "cuota": 500000000000000000,
-            "interestRate": 10368000000000
+            "lentTime": 1541796770,
+            "cuota": 1100000000000000000,
+            "interestRate": 25920000000200
         },
         "commits": [
             {
                 "opcode": "created_installments",
-                "timestamp": 1539849581,
-                "order": 0,
-                "proof": "0xa3d0b893d062e7286ba502c28537b9c939af867427f34673c8b94570da91ea4b",
+                "timestamp": 1541796770,
+                "order": 4,
+                "proof": "0xfe6eac4a8a88695d43e71089af2554742716fbe25c3f1509a49ac0c1bf386eca",
                 "data": {
-                    "installments": 30,
-                    "timeUnit": 11,
+                    "installments": 12,
+                    "timeUnit": 60,
                     "duration": 86400,
-                    "lentTime": 1539849581,
-                    "cuota": 500000000000000000,
-                    "interestRate": 10368000000000
+                    "lentTime": 1541796770,
+                    "cuota": 1100000000000000000,
+                    "interestRate": 25920000000200
                 }
             }
         ]
@@ -246,24 +241,25 @@ sidebar_label: API
 }
 ```
 
-## Requests
+## Loans
 
-### Fetching requests
+### Fetching loans
 
-    GET /v4/requests/
+    GET /v4/loans/
 
 #### Query parameters:
 
 | Field     | Type    | Description                                                | Optional |
 |-----------|---------|------------------------------------------------------------|----------|
-| open      | boolean | Get a list of requests with error equal than this value    | Yes      |
-| approved  | boolean | Get a list of requests with approved equal than this value | Yes      |
-| cosigner  | string  | Get a list of requests with cosigner equal than this value | Yes      |
-| model     | string  | Get a list of requests with model equal than this value    | Yes      |
-| creator   | string  | Get a list of requests with creator equal than this value  | Yes      |
-| oracle    | string  | Get a list of requests with oracle equal than this value   | Yes      |
-| borrower  | string  | Get a list of requests with borrower equal than this value | Yes      |
-| canceled  | boolean | Get a list of requests with canceled equal than this value | Yes      |
+| open      | boolean | Get a list of loans with error equal than this value    | Yes      |
+| approved  | boolean | Get a list of loans with approved equal than this value | Yes      |
+| cosigner  | string  | Get a list of loans with cosigner equal than this value | Yes      |
+| model     | string  | Get a list of loans with model equal than this value    | Yes      |
+| creator   | string  | Get a list of loans with creator equal than this value  | Yes      |
+| oracle    | string  | Get a list of loans with oracle equal than this value   | Yes      |
+| borrower  | string  | Get a list of loans with borrower equal than this value | Yes      |
+| canceled  | boolean | Get a list of loans with canceled equal than this value | Yes      |
+| status    | string  | Get a list of loans with status equal than this value      | Yes      |
 | page_size | integer | Get a list of config with n items                          | Yes      |
 | page      | integer | Get the nth page of configs                                | Yes      |
 
@@ -286,43 +282,85 @@ sidebar_label: API
     },
     "content": [
         {
-            "id": "0xfec6fe99f05f3dabf00a850e4904d0ed1356a9fde34e2640d6fea0deb3fae21c",
-            "open": true,
+            "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+            "open": false,
             "approved": true,
             "position": "0",
-            "expiration": "15908979783594147839",
+            "expiration": "3136633892082024447",
             "amount": "12000000000000000000",
             "cosigner": "0x0",
-            "model": "0x3dF10D67F683FE26a9f658b99e3C6a4a94d20690",
-            "creator": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+            "model": "0xE3633E63Da6154D9450e34F0d4c64c6A51f6918e",
+            "creator": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C",
             "oracle": "0x0000000000000000000000000000000000000000",
-            "borrower": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
-            "salt": "2031996",
-            "loanData": "000000000000000010cac896d239000000000000000000000000000000000000000000000000000000001792f7c64c0000000a0000014ff0",
-            "canceled": false,
-            "created": "1539878572",
+            "borrower": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C",
+            "salt": "51254173808193647528491371025376947732924163382010321361587123973758161466083",
+            "loanData": "00000000000000000f43fc2c04ee000000000000000000000000000000000000000000000000000000001792f86480c800000c00000151800000003c",
+            "created": "1541796210",
+            "descriptor": {
+                "first_obligation": "1100000000000000000",
+                "total_obligation": "13200000000000000000",
+                "duration": "1036800",
+                "interest_rate": "298.6111111111114",
+                "punitive_interest_rate": "25920000000200",
+                "frequency": "86400",
+                "installments": "12"
+            },
+            "currency": "0000000000000000000000000000000000000000000000000000000000000000",
+            "status": "1",
             "commits": [
                 {
                     "opcode": "requested_loan_manager",
-                    "timestamp": 1539878572,
-                    "order": 3,
-                    "proof": "0x5630976a4dc9990153445cf6178742df7f5859bf345053dd202702465442b9fc",
+                    "timestamp": 1541796210,
+                    "order": 0,
+                    "proof": "0xb040d83bacf5a18a74704d41c391cebe92d0c5955597cc8c9871acae4c3b4794",
                     "data": {
-                        "id": "0xfec6fe99f05f3dabf00a850e4904d0ed1356a9fde34e2640d6fea0deb3fae21c",
+                        "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
                         "open": true,
                         "approved": true,
                         "position": "0",
-                        "cosigner": "0x0",
-                        "currency": "0000000000000000000000000000000000000000000000000000000000000000",
+                        "expiration": "3136633892082024447",
                         "amount": "12000000000000000000",
-                        "model": "0x3dF10D67F683FE26a9f658b99e3C6a4a94d20690",
-                        "creator": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+                        "cosigner": "0x0",
+                        "model": "0xE3633E63Da6154D9450e34F0d4c64c6A51f6918e",
+                        "creator": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C",
                         "oracle": "0x0000000000000000000000000000000000000000",
-                        "borrower": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
-                        "salt": "2031996",
-                        "loanData": "000000000000000010cac896d239000000000000000000000000000000000000000000000000000000001792f7c64c0000000a0000014ff0",
-                        "expiration": "15908979783594147839",
-                        "created": "1539878572"
+                        "borrower": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C",
+                        "salt": "51254173808193647528491371025376947732924163382010321361587123973758161466083",
+                        "loanData": "00000000000000000f43fc2c04ee000000000000000000000000000000000000000000000000000000001792f86480c800000c00000151800000003c",
+                        "created": "1541796210",
+                        "descriptor": {
+                            "first_obligation": "1100000000000000000",
+                            "total_obligation": "13200000000000000000",
+                            "duration": "1036800",
+                            "interest_rate": "298.6111111111114",
+                            "punitive_interest_rate": "25920000000200",
+                            "frequency": "86400",
+                            "installments": "12"
+                        },
+                        "currency": "0000000000000000000000000000000000000000000000000000000000000000",
+                        "status": "1"
+                    }
+                },
+                {
+                    "opcode": "approved_loan_manager",
+                    "timestamp": 1541796210,
+                    "order": 1,
+                    "proof": "0xb040d83bacf5a18a74704d41c391cebe92d0c5955597cc8c9871acae4c3b4794",
+                    "data": {
+                        "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+                        "approved": true
+                    }
+                },
+                {
+                    "opcode": "lent_loan_manager",
+                    "timestamp": 1541796770,
+                    "order": 3,
+                    "proof": "0xfe6eac4a8a88695d43e71089af2554742716fbe25c3f1509a49ac0c1bf386eca",
+                    "data": {
+                        "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+                        "lender": "0x00000000000000000000000006779a9848e5df60ce0f5f63f88c5310c4c728",
+                        "tokens": "9c000000000000000000000000000000000000000000000000a688906bd8b000",
+                        "open": false
                     }
                 }
             ]
@@ -333,9 +371,9 @@ sidebar_label: API
 ```
 
 
-### Fetching a request
+### Fetching a loan
 
-    GET /v4/requests/:id/
+    GET /v4/loans/:id/
 
 #### Response
 
@@ -349,43 +387,85 @@ sidebar_label: API
         }
     },
     "content": {
-        "id": "0x2d346849518181a645b5b88b633af0c708ca1023f7f9df17caa93ec713abb038",
-        "open": true,
+        "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+        "open": false,
         "approved": true,
         "position": "0",
-        "expiration": "15908979783594147839",
+        "expiration": "3136633892082024447",
         "amount": "12000000000000000000",
         "cosigner": "0x0",
-        "model": "0x3dF10D67F683FE26a9f658b99e3C6a4a94d20690",
-        "creator": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+        "model": "0xE3633E63Da6154D9450e34F0d4c64c6A51f6918e",
+        "creator": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C",
         "oracle": "0x0000000000000000000000000000000000000000",
-        "borrower": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
-        "salt": "18102018",
-        "loanData": "000000000000000010cac896d239000000000000000000000000000000000000000000000000000000001792f7c64c0000000a0000014ff0",
-        "canceled": false,
-        "created": "1539878721",
+        "borrower": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C",
+        "salt": "51254173808193647528491371025376947732924163382010321361587123973758161466083",
+        "loanData": "00000000000000000f43fc2c04ee000000000000000000000000000000000000000000000000000000001792f86480c800000c00000151800000003c",
+        "created": "1541796210",
+        "descriptor": {
+            "first_obligation": "1100000000000000000",
+            "total_obligation": "13200000000000000000",
+            "duration": "1036800",
+            "interest_rate": "298.6111111111114",
+            "punitive_interest_rate": "25920000000200",
+            "frequency": "86400",
+            "installments": "12"
+        },
+        "currency": "0000000000000000000000000000000000000000000000000000000000000000",
+        "status": "1",
         "commits": [
             {
                 "opcode": "requested_loan_manager",
-                "timestamp": 1539878721,
-                "order": 4,
-                "proof": "0xfab4fa4a5c3d6aec16851227037dad52f09be0374a56a4ea8bf0389fda2c6be0",
+                "timestamp": 1541796210,
+                "order": 0,
+                "proof": "0xb040d83bacf5a18a74704d41c391cebe92d0c5955597cc8c9871acae4c3b4794",
                 "data": {
-                    "id": "0x2d346849518181a645b5b88b633af0c708ca1023f7f9df17caa93ec713abb038",
+                    "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
                     "open": true,
                     "approved": true,
                     "position": "0",
-                    "cosigner": "0x0",
-                    "currency": "0000000000000000000000000000000000000000000000000000000000000000",
+                    "expiration": "3136633892082024447",
                     "amount": "12000000000000000000",
-                    "model": "0x3dF10D67F683FE26a9f658b99e3C6a4a94d20690",
-                    "creator": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
+                    "cosigner": "0x0",
+                    "model": "0xE3633E63Da6154D9450e34F0d4c64c6A51f6918e",
+                    "creator": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C",
                     "oracle": "0x0000000000000000000000000000000000000000",
-                    "borrower": "0x35d803F11E900fb6300946b525f0d08D1Ffd4bed",
-                    "salt": "18102018",
-                    "loanData": "000000000000000010cac896d239000000000000000000000000000000000000000000000000000000001792f7c64c0000000a0000014ff0",
-                    "expiration": "15908979783594147839",
-                    "created": "1539878721"
+                    "borrower": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C",
+                    "salt": "51254173808193647528491371025376947732924163382010321361587123973758161466083",
+                    "loanData": "00000000000000000f43fc2c04ee000000000000000000000000000000000000000000000000000000001792f86480c800000c00000151800000003c",
+                    "created": "1541796210",
+                    "descriptor": {
+                        "first_obligation": "1100000000000000000",
+                        "total_obligation": "13200000000000000000",
+                        "duration": "1036800",
+                        "interest_rate": "298.6111111111114",
+                        "punitive_interest_rate": "25920000000200",
+                        "frequency": "86400",
+                        "installments": "12"
+                    },
+                    "currency": "0000000000000000000000000000000000000000000000000000000000000000",
+                    "status": "1"
+                }
+            },
+            {
+                "opcode": "approved_loan_manager",
+                "timestamp": 1541796210,
+                "order": 1,
+                "proof": "0xb040d83bacf5a18a74704d41c391cebe92d0c5955597cc8c9871acae4c3b4794",
+                "data": {
+                    "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+                    "approved": true
+                }
+            },
+            {
+                "opcode": "lent_loan_manager",
+                "timestamp": 1541796770,
+                "order": 3,
+                "proof": "0xfe6eac4a8a88695d43e71089af2554742716fbe25c3f1509a49ac0c1bf386eca",
+                "data": {
+                    "id": "0xf2523c4a6574f570726a7b937321ea98f31f7274ecbe707a1d50ce3e1dbd0d21",
+                    "lender": "0x00000000000000000000000006779a9848e5df60ce0f5f63f88c5310c4c728",
+                    "tokens": "9c000000000000000000000000000000000000000000000000a688906bd8b000",
+                    "open": false
                 }
             }
         ]
@@ -397,8 +477,8 @@ sidebar_label: API
 
 ```json
 {
-    "title": "Request does not exists",
-    "description": "Request with id=x does not exists"
+    "title": "Loan does not exists",
+    "description": "Loan with id=x does not exists"
 }
 ```
 
