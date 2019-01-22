@@ -20,6 +20,14 @@ sidebar_label: API
 | model     | string  | Get a list of debts with model equal than this value    | Yes      |
 | creator   | string  | Get a list of debts with creator equal than this value  | Yes      |
 | oracle    | string  | Get a list of debts with oracle equal than this value   | Yes      |
+| balance__lt | string | Get a list of debts with balance less than this value  | Yes      |
+| balance__lte | string | Get a list of debts with balance less than or equal to this value  | Yes      |
+| balance__gt | string | Get a list of debts with balance greater than or equal to this value  | Yes      |
+| balance__gte | string | Get a list of debts with balance greater than or equal to this value  | Yes      |
+| created__lt | string | Get a list of debts with created less than this value  | Yes      |
+| created__lte | string | Get a list of debts with created less than or equal to this value  | Yes      |
+| created__gt | string | Get a list of debts with created greater than or equal to this value  | Yes      |
+| created__gte | string | Get a list of debts with created greater than or equal to this value  | Yes      |
 | page_size | integer | Get a list of config with n items                       | Yes      |
 | page      | integer | Get the nth page of configs                             | Yes      |
 
@@ -260,6 +268,18 @@ sidebar_label: API
 | borrower  | string  | Get a list of loans with borrower equal than this value | Yes      |
 | canceled  | boolean | Get a list of loans with canceled equal than this value | Yes      |
 | status    | string  | Get a list of loans with status equal than this value      | Yes      |
+| expiration_lt | string | Get a list of loans with expiration less than this value | Yes |
+| expiration_lte | string | Get a list of loans with expiration less than or equal to this value | Yes |
+| expiration_gt | string | Get a list of loans with expiration greater than this value | Yes |
+| expiration_gte | string | Get a list of loans with expiration greater than or equal to this value | Yes |
+| amount_lt | string | Get a list of loans with amount less than this value | Yes |
+| amount_lte | string | Get a list of loans with amount less than or equal to this value | Yes |
+| amount_gt | string | Get a list of loans with amount greater than this value | Yes |
+| amount_gte | string | Get a list of loans with amount greater than or equal to this value | Yes |
+| created_lt | string | Get a list of loans with created less than this value | Yes |
+| created_lte | string | Get a list of loans with created less than or equal to this value | Yes |
+| created_gt | string | Get a list of loans with created greater than this value | Yes |
+| created_gte | string | Get a list of loans with created greater than or equal to this value | Yes |
 | page_size | integer | Get a list of config with n items                          | Yes      |
 | page      | integer | Get the nth page of configs                                | Yes      |
 
