@@ -268,6 +268,7 @@ sidebar_label: API
 | borrower  | string  | Get a list of loans with borrower equal than this value | Yes      |
 | canceled  | boolean | Get a list of loans with canceled equal than this value | Yes      |
 | status    | string  | Get a list of loans with status equal than this value      | Yes      |
+| lender    | string  | Get a list of loans with lender equal than this value      | Yes      |
 | expiration_lt | string | Get a list of loans with expiration less than this value | Yes |
 | expiration_lte | string | Get a list of loans with expiration less than or equal to this value | Yes |
 | expiration_gt | string | Get a list of loans with expiration greater than this value | Yes |
@@ -328,6 +329,7 @@ sidebar_label: API
             },
             "currency": "0000000000000000000000000000000000000000000000000000000000000000",
             "status": "1",
+            "lender": "0x06779a9848e5df60ce0f5f63f88c5310c4c7289c",
             "commits": [
                 {
                     "opcode": "requested_loan_manager",
@@ -350,6 +352,7 @@ sidebar_label: API
                         "canceled": false,
                         "loanData": "00000000000000000f43fc2c04ee000000000000000000000000000000000000000000000000000000001792f86480c800000c00000151800000003c",
                         "created": "1541796210",
+                        "lender": "0x06779a9848e5df60ce0f5f63f88c5310c4c7289c",
                         "descriptor": {
                             "first_obligation": "1100000000000000000",
                             "total_obligation": "13200000000000000000",
@@ -424,6 +427,7 @@ sidebar_label: API
         "canceled": false,
         "loanData": "00000000000000000f43fc2c04ee000000000000000000000000000000000000000000000000000000001792f86480c800000c00000151800000003c",
         "created": "1541796210",
+        "lender": "0x06779a9848e5df60ce0f5f63f88c5310c4c7289c",
         "descriptor": {
             "first_obligation": "1100000000000000000",
             "total_obligation": "13200000000000000000",
@@ -457,6 +461,7 @@ sidebar_label: API
                     "canceled": false,
                     "loanData": "00000000000000000f43fc2c04ee000000000000000000000000000000000000000000000000000000001792f86480c800000c00000151800000003c",
                     "created": "1541796210",
+                    "lender": "0x06779a9848e5df60ce0f5f63f88c5310c4c7289c",
                     "descriptor": {
                         "first_obligation": "1100000000000000000",
                         "total_obligation": "13200000000000000000",
