@@ -751,11 +751,11 @@ sidebar_label: API
 ```json
 {
     "paid": 0,
-    "dueTime": 1541883170,
-    "estimatedObligation": 13442944166664979548,
-    "nextObligation": 1100000000000000000,
-    "currentObligation": 13442944166664979548,
-    "debtBalance": "0",
+    "due_time": 1541883170,
+    "estimated_obligation": 13442944166664979548,
+    "next_obligation": 1100000000000000000,
+    "current_obligation": 13442944166664979548,
+    "debt_balance": "0",
     "owner": "0x06779a9848e5Df60ce0F5f63F88c5310C4c7289C"
 }
 ```
