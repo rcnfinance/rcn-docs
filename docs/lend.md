@@ -60,7 +60,7 @@ oracleRespose = [
 
 ~~~
 
-If the address of the oracle is equal to address '0x0' the currency is RCN, so no convertion is needed and the amount is return.
+If the address of the oracle is equal to address '0x0' the currency is RCN, so no conversion is needed and the amount is return.
 
 ### Cosigner
 
@@ -68,7 +68,7 @@ The lender can include a cosigner at the moment of lending. This cosigner addres
 
 ### Cosigner Limit 
 
-The cosigner limit refers to the maximum amount that the lender is willing to pay the cosigner for the aditional cost that implies. 
+The cosigner limit refers to the maximum amount that the lender is willing to pay the cosigner for the additional cost that implies. 
 
 ### 
 
@@ -110,6 +110,6 @@ debt = await debtEngine.debts(id);
 
 ~~~
 
-In the Debt Engine 'create2' function "model.create(id,data)" is call , which creates the structure and necessary data of the loan in the model contract. This depends on the model being use when the loan was requested and how the "create(id, data)" function is implemented.
+In the Debt Engine "create2" function, "model.create(id,data)" is call , which creates the structure and necessary data of the loan in the model contract. This depends on the model being use when the loan was requested and how the "create(id,data)" function is implemented.
 
 ###
