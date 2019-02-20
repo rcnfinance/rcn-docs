@@ -9,10 +9,10 @@ The point of entry to lend is the LoanManager. This contract allows the lender t
 The lender has to set all the required parameters to perform lending. Some of the requirements to be able to lend are: The loan request should be open, 
 approved by the borrower, not expired and the lender should have enough funds. 
 
-### Lend function interface
+## Lend function
 
 ~~~ javascript
-// Lend function interfece
+// Lend function interface
 
 function lend(
         bytes32 _id,        
@@ -84,8 +84,8 @@ The cosigner data holds information about the cosigner added by the lender.
 // Lend loan example 
 
 const lendTransaction = await loanManager.lend(
-            '', // Loan Id
-            [],                 // O0x86029ff516bbfe74ad2c96e90a18d9b3e984d2152a10824ab0ee4521ab952728racleData
+            '0x86029ff516bbfe74ad2c96e90a18d9b3e984d2152a10824ab0ee4521ab952728', // Loan Id  
+            [],                 // Oracle Data
             '0x0000000000000000000000000000000000000000',   // Cosigner  0x address
             '0', // Cosigner limit
             [],                 // Cosigner data 
