@@ -13,7 +13,8 @@
       "lend",
       "pay",
       "withdraw",
-      "transfer"
+      "transfer",
+      "cancel-request"
     ],
     "Protocol": [
       "diaspore",
