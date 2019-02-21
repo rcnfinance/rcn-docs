@@ -12,7 +12,8 @@
       "request-loan",
       "lend",
       "pay",
-      "withdraw"
+      "withdraw",
+      "transfer"
     ],
     "Protocol": [
       "diaspore",
