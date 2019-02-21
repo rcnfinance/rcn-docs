@@ -4,7 +4,7 @@ title: Pay loan
 sidebar_label: Pay loan 
 ---
 
-The point of entry to pay a loan is the Debt Engine. This contract allows any address to pay the debt of a borrower, totally or partially.
+The point of entry to pay a loan is the Debt Engine. This fucntion allows any address to pay the debt of a borrower, totally or partially.
 
 The sender address of the payment transaction should have enough funds to pay for the amount entered.
 
