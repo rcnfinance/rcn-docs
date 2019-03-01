@@ -9,7 +9,12 @@
     ],
     "How to": [
       "interact",
-      "request-loan"
+      "request-loan",
+      "lend",
+      "pay",
+      "withdraw",
+      "transfer",
+      "cancel-request"
     ],
     "Protocol": [
       "diaspore",
