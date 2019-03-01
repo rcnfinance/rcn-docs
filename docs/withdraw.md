@@ -15,7 +15,7 @@ The authorized sender can withdraw part or the total of the available withdrawal
 
 function withdraw(
     bytes32 _id,    // Loan Id
-    address _to     // reciever address of withdrawal amount  
+    address _to     // receiver address of withdrawal amount  
     )     
     external returns (uint256 amount) 
     
@@ -29,13 +29,13 @@ function withdrawPartial(
     external returns (bool success)
 ~~~
 
-### Reciever Address (_to)
+### Receiver Address (_to)
 
-This parameter refers to the address that the tokens are transfered to.
+This parameter refers to the address that the tokens are transferred to.
 
 ### Withdrawal amount (_amount)
 
-In the "withdrawPartial" function it is posible to define a partial amount to withdraw of the available withdrawal amount.
+In the "withdrawPartial" function it is possible to define a partial amount to withdraw of the available withdrawal amount.
 
 ### 
 
@@ -49,7 +49,7 @@ previousBalanceOfAddress = await rcnToken.balanceOf(accounts[1]);
 // Partial Withdraw
 const withdrawTransaction = await debtEngine.withdrawPartial(
     '0x86029ff516bbfe74ad2c96e90a18d9b3e984d2152a10824ab0ee4521ab952728', // Id of the Loan                                       
-    accounts[1],                                 // reciever account of the withdrawal amount   
+    accounts[1],                                 // receiver account of the withdrawal amount   
     web3.utils.toWei("20", "ether"),            // Amount to withdraw equal to = '20000000000000000000'
     { from: accounts[1] });                     // sender address Should be authorized  
 

@@ -25,7 +25,7 @@ This function allows the transfer of ownership of a debt. The sender should be a
 
 This parameter refers to the address that currently owns the debt.
 
-### Reciever address (_to)
+### Receiver address (_to)
 
 This parameter refers to the address to receive the ownership of the debt.
 
